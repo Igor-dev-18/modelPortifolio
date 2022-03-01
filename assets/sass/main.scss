@@ -1,0 +1,131 @@
+// VARIABLES
+$primary-color: #EF3054;
+$darkblue-color: #191C34;
+$black-color: #333;
+$gray-color: #C4C4C4;
+$white-color: #FFF;
+
+
+//FONT AND SIZE
+
+$font-text: 'Raleway',
+sans-serif;
+
+@mixin font-menu() {
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 0.875rem;
+    }
+}
+
+@mixin font-logo-and-icons() {
+    font-size: 1.25rem;
+   
+    @media screen and (min-width: 900px) {
+        font-size: 1.5rem;
+    }
+
+}
+
+@mixin font-xs() {
+    font-size: 0.75rem;
+    line-height: 150%;
+    //font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 0.875rem;
+    }
+}
+
+@mixin font-sm() {
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 1rem;
+    }
+}
+
+@mixin font-md() {
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 1.125rem;
+    }
+}
+
+
+@mixin font-lg() {
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 1.25rem;
+    }
+}
+
+
+@mixin font-xl() {
+    font-size: 1.25rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 3rem;
+    }
+}
+
+@mixin font-xxl() {
+    font-size: 1.75rem;
+    line-height: 150%;
+    font-weight: bold;
+
+    @media screen and (min-width: 900px) {
+        font-size: 4rem;
+    }
+}
+
+
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// GENERAL
+
+body{
+    font-family: $font-text;
+    color: $black-color;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+// LAYOUT
+.container-grid{
+    max-width: 75rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+}

@@ -1,3 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Raleway", sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-grid {
+  max-width: 75rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "sidebar header" "sidebar main" "sidebar footer";
+}
 
 /*# sourceMappingURL=styles.css.map */
