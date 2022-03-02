@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>Vanessa Monteiro</title>
     <meta name="author" content="Igor Melo">
     <meta name="keywords" content="Portifólio, Design, Developer, Desenvolvimento Web">
@@ -51,23 +51,34 @@
 
             <nav class="header__navbar">
 
-                <ul class="header__menu">
-                    <li class="menu__item"><a href="#" class="menu__link">Portifólio</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Sobre Mim</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Meu Blog</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Serviços</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Contato</a></li>
-                </ul>
+                <div class="header__menu">
 
-                <a href="tel:21993982634" class="header__callme"><i class='bx bxs-phone'></i><span>Me ligue</span></a>
+                    <button class="menu__btn-close">
+                        <i class='bx bx-x'></i>
+                    </button>
+
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#" class="menu__link">Portifólio</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Sobre Mim</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Meu Blog</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Serviços</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Contato</a></li>
+                    </ul>
+
+                    <a href="tel:21993982634" class="header__callme"><i class='bx bxs-phone'></i><span>Me
+                            ligue</span></a>
+                </div>
 
 
+                <button class="header__toogle-button">
+                    <i class='bx bx-menu'></i>
+                </button>
 
-                <div class="header__toogle-button">
+                <!--  <div class="header__toogle-button">
                     <div class="line line1"></div>
                     <div class="line line2"></div>
                     <div class="line line3"></div>
-                </div>
+                </div> -->
             </nav>
         </header>
         <!-- END HEADER -->
