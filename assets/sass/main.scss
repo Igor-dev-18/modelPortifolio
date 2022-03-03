@@ -156,7 +156,11 @@ img {
         "sidebar header"
         "sidebar main"
         "sidebar footer";
+
+    height: 100vh;
 }
+
+
 
 .sidebar {
     grid-area: sidebar;
@@ -284,6 +288,49 @@ img {
                         color: $white-color;
                         text-transform: uppercase;
                         //border: 1px solid black;
+
+                    }
+
+                    @media screen and (min-width:900px) {
+
+                        position: relative;
+                        padding-left: 0;
+                        padding-bottom: 4px;
+
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 2px;
+                            width: 100%;
+                            background-color: $black-color;
+                            // display: block;
+                            visibility: hidden;
+                            transform-origin: 0 0;
+                            transform: scaleX(0);
+                            transition: all 475ms ease;
+                        }
+
+                        &:hover::after {
+                            visibility: visible;
+                            transform: scaleX(1);
+                        }
+
+                        &.active::after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            height: 2px;
+                            width: 100%;
+                            background-color: $black-color;
+                            visibility: visible;
+                            transform: scale(1);
+
+                        }
+
 
                     }
                 }
@@ -456,4 +503,62 @@ img {
 .footer {
     grid-area: footer;
     @include lateralPadding;
+
+    @include flex {
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    text-align: center;
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        text-align: left;
+        gap: 32px;
+    }
+
+    @media screen and (min-width: 900px) {
+        gap: 64px;
+    }
+
+    .footer__item {
+
+
+
+        .item__title {
+            @include font-md;
+            margin-bottom: 4px;
+
+            @media screen and (min-width: 700px) {
+                margin-bottom: 8px;
+            }
+        }
+
+        .item__link {
+            @include font-sm;
+            font-weight: 400;
+            font-style: italic;
+            color: $black-color;
+        }
+
+        &:nth-of-type(2) {
+            @media screen and (min-width: 700px) {
+                border-left: 1px solid $gray-color;
+                border-right: 1px solid $gray-color;
+                padding: 0 32px;
+            }
+
+            @media screen and (min-width: 900px) {
+                padding: 0 64px;
+            }
+        }
+    }
+
+
+
+
+
 }

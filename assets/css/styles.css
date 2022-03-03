@@ -28,6 +28,7 @@ img {
   margin: 0 auto;
   display: grid;
   grid-template-areas: "sidebar header" "sidebar main" "sidebar footer";
+  height: 100vh;
 }
 
 .sidebar {
@@ -173,6 +174,41 @@ img {
   .header .header__navbar .header__menu .menu .menu__link {
     color: #FFF;
     text-transform: uppercase;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header .header__navbar .header__menu .menu .menu__link {
+    position: relative;
+    padding-left: 0;
+    padding-bottom: 4px;
+  }
+  .header .header__navbar .header__menu .menu .menu__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    visibility: hidden;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    transition: all 475ms ease;
+  }
+  .header .header__navbar .header__menu .menu .menu__link:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  .header .header__navbar .header__menu .menu .menu__link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    visibility: visible;
+    transform: scale(1);
   }
 }
 .header .header__navbar .header__menu .header__callme {
@@ -389,6 +425,14 @@ img {
   grid-area: footer;
   padding-left: 16px;
   padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 @media screen and (min-width: 700px) {
   .footer {
@@ -400,6 +444,59 @@ img {
   .footer {
     padding-left: 24px;
     padding-right: 0;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer {
+    flex-direction: row;
+    text-align: left;
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    gap: 64px;
+  }
+}
+.footer .footer__item .item__title {
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+@media screen and (min-width: 900px) {
+  .footer .footer__item .item__title {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer .footer__item .item__title {
+    margin-bottom: 8px;
+  }
+}
+.footer .footer__item .item__link {
+  font-size: 0.875rem;
+  line-height: 150%;
+  font-weight: bold;
+  font-weight: 400;
+  font-style: italic;
+  color: #333;
+}
+@media screen and (min-width: 900px) {
+  .footer .footer__item .item__link {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer .footer__item:nth-of-type(2) {
+    border-left: 1px solid #C4C4C4;
+    border-right: 1px solid #C4C4C4;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer .footer__item:nth-of-type(2) {
+    padding: 0 64px;
   }
 }
 
